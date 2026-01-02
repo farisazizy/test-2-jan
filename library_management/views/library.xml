@@ -1,0 +1,37 @@
+<odoo>
+    <!-- list VIEW -->
+    <record id="view_library_management_list" model="ir.ui.view">
+        <field name="name">library.management.list</field>
+        <field name="model">library.management</field>
+        <field name="arch" type="xml">
+            <list string="Library Management">
+                <field name="title"/>
+                <field name="author_id"/>
+                <field name="price"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- FORM VIEW -->
+    <record id="view_library_management_form" model="ir.ui.view">
+        <field name="name">library.management.form</field>
+        <field name="model">library.management</field>
+        <field name="arch" type="xml">
+            <form string="Library Management">
+                <field name="title"/>
+                <field name="author_id"/>
+                <field name="price"/>
+            </form>
+        </field>
+    </record>
+
+    <!-- ACTION -->
+    <record id="action_library_management" model="ir.actions.act_window">
+        <field name="name">Library Management</field>
+        <field name="res_model">library.management</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_books" name="Profiling" sequence="10" web_icon="library_management,static/description/icon.png"/>
+    <!-- <menuitem id="menu_category" name="Profiling" parent="menu_iiss_root" sequence="20"/> -->
+</odoo>
