@@ -14,3 +14,5 @@ class LibraryBook(models.Model):
         for record in self:
             if record.price < 0:
                 raise ValidationError("Price must be more than zero.")
+            
+            
