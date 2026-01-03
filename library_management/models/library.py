@@ -8,7 +8,6 @@ class LibraryBook(models.Model):
     title = fields.Char(string='Title', required=True)
     author_id = fields.Many2one('res.partner', string='Author')
     price = fields.Float(string='Price')
-    
     category_id = fields.Many2one('library.category', string='Categories', required=True)
 
     @api.constrains('price')
